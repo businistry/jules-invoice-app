@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+    min-height: max(884px, 100dvh);
+  }
+}
+
+/* Custom scrollbar for mobile feel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Glassmorphism utility */
+.glass-dark {
+  background: rgba(16, 22, 34, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Custom Range Slider Styling */
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: #2d3648;
+  border-radius: 2px;
+}
+
+/* Toggle Switch Styling */
+.toggle-checkbox:checked {
+  right: 0;
+  border-color: #135bec;
+}
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #135bec;
+}
+
+.stamp-animation {
+  transform: rotate(-12deg);
+  mix-blend-mode: multiply;
+}
